@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pagina administrativa</title>
+  </head>
+  <body>
+    <h1>Bem-vindo a pagina administrativa.</h1>
+    <section class="formulario">
+      <form action="/api/userCad" method="POST">
+        <label for="username">Nome de usuário:</label><br>
+        <input type="text" name="username" id="username" placeholder="Digite o nome de usuário/login"><br><br>
+
+        <label for="email">E-mail de contato:</label><br>
+        <input type="email" name="email" id="email" placeholder="Digite o endereço de e-mail do usuário"><br><br>
+        
+        <label for="password">Senha:</label><br>
+        <input type="password" name="password" id="password" placeholder="Digite sua senha"><br><br>
+        
+        <label for="passwordConfirm">Confirme a senha:</label><br>
+        <input type="password" name="passwordConfirm" id="passwordConfirm" placeholder="Confirme a sua senha"><br><br>
+        
+        
+        <p>Selecione o tipo de usuário:</p>
+        <input type="radio" name="tipo_id" id="admin" value="1">
+        <label for="admin">Administrador</label><br>
+      
+        <input type="radio" name="tipo_id" id="aluno" value="3">
+        <label for="aluno">Aluno</label><br>
+        
+        <input type="radio" name="tipo_id" id="professor" value="2">
+        <label for="professor">Professor</label><br><br>
+    
+        <button type="submit" id="saveBtn">Salvar</button>
+      </form>
+    </section>
+  </body>
+</html>
