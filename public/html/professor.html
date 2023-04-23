@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/prof.css">
-    <link rel="stylesheet" href="../../css/geral.css">
+    <link rel="stylesheet" href="../css/prof.css">
+    <link rel="stylesheet" href="../css/geral.css">
+    <link rel="stylesheet" href="../css/textEditor.css">
     <title>Pagina do Professor</title>
 </head>
-
 <body>
     <header>
         <h1>Bem vindo Prof. Fulano</h1>
@@ -25,13 +25,17 @@
                 </select><br>
                 <label for="titulo">Titulo</label><br>
                 <input type="text" name="titulo" value=""><br>
-                <label for="conteudo">Conteúdo</label><br>
-                <textarea name="conteudo"></textarea><br>
+
+                <div id="container">
+                    <div id="editor">
+                    </div>
+                  </div>
+                
                 <input type="submit" value="Cadastrar Conteúdo">
             </form>
         </section>
         <section class="section">
-            <form action="../../php/criar_evento.php" method="post">
+            <form action="api/eventoCad" method="post">
                 <label for="dataDoEvento">Data:</label>
                 <input type="date" id="data" name="dataDoEvento">
 
@@ -45,6 +49,7 @@
             </form>
         </section>
     </main>
+    <script src="https://cdn.ckeditor.com/ckeditor5/37.1.0/super-build/ckeditor.js"></script>
+    <script src="../js/textEditor.js"></script>
 </body>
-
 </html>
