@@ -46,16 +46,13 @@ app.post("/api/login", (req, res) => {
       console.error(err);
       res.status(500).send("Erro no servidor.");
     } else if (row) {
-      const { username, tipo_id } = row;
+      const { tipo_id } = row;
       if (tipo_id === 1) {
         res.sendFile(__dirname + "/public/html/admin.html");
-        // res.redirect(`/admin.html?username=${username}`);
       } else if (tipo_id === 2) {
         res.sendFile(__dirname + "/public/html/professor.html");
-        // res.redirect(`/professor.html?username=${username}`);
       } else if (tipo_id === 3) {
         res.sendFile(__dirname + "/public/html/aluno.html");
-        // res.redirect(`/aluno.html?username=${username}`);
       } else if (tipo_id === null) {
         res.status(401).send("Acesso negado.");
       } else {
